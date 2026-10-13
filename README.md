@@ -25,6 +25,15 @@
   </tr>
 </table>
 
+<h3 align="center">🧩 Claude Skills I built</h3>
+<p align="center"><sub>Drop-in Agent Skills for Claude Code, Claude.ai & the API</sub></p>
+
+<p align="center">
+  <a href="https://github.com/shahab7e/ux-skill"><img src="assets/skill-ux-skill.svg" width="100%" alt="UX Skill — senior UX designer judgment for Claude" /></a>
+  <a href="https://github.com/shahab7e/virastari-skill"><img src="assets/skill-virastari-skill.svg" width="100%" alt="Virastari — Persian copy-editing skill" /></a>
+  <a href="https://github.com/shahab7e/behtar-nevisi-skill"><img src="assets/skill-behtar-nevisi-skill.svg" width="100%" alt="Behtar Nevisi — Persian writing-improvement skill" /></a>
+</p>
+
 <h3 align="center">🧰 Arsenal</h3>
 
 <p align="center">
