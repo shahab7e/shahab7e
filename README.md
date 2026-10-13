@@ -34,10 +34,6 @@
 <h3 align="center">📈 Activity</h3>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=shahab7e&bg_color=0b0b12&color=a78bfa&line=f472b6&point=22d3ee&area=true&area_color=a78bfa&hide_border=true&radius=16" width="100%" alt="contribution graph" />
-</p>
-
-<p align="center">
   <img height="170" src="https://streak-stats.demolab.com?user=shahab7e&background=0b0b12&border=00000000&ring=a78bfa&fire=f472b6&currStreakNum=e5e7eb&sideNums=e5e7eb&currStreakLabel=22d3ee&sideLabels=9ca3af&dates=6b7280&stroke=1f1f2e&border_radius=16" alt="streak" />
   <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=shahab7e&layout=compact&bg_color=0b0b12&title_color=a78bfa&text_color=e5e7eb&hide_border=true&border_radius=16" alt="top languages" />
 </p>
