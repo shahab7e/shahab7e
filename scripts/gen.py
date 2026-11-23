@@ -162,20 +162,18 @@ def svg(name, h, body, css="", aria=""):
 # ------------------------------------------------------------------ hero
 def hero():
     H = 404
-    title, tw = pixel_text("SHAHAB", 252 + (W - 252) / 2, 100, 17)
-    sweep = (f'<rect class="sc" x="1" y="62" width="238" height="10" fill="{PAPER}" opacity=".12"/>')
-    buf = io.BytesIO()
-    Image.open(os.path.join(OUT, "portrait.png")).convert("L").resize((480, 480), Image.LANCZOS).save(buf, "PNG", optimize=True)
-    face = "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
+    title, tw = pixel_text("SHAHAB", 372 + (W - 372) / 2, 100, 17)
+    sweep = (f'<rect class="sc" x="1" y="62" width="358" height="10" fill="{PAPER}" opacity=".12"/>')
+    stars = "".join(f'<rect class="tw" x="{random.Random(i).uniform(20, 340):.0f}" y="{random.Random(i+50).uniform(78, 290):.0f}" '
+                    f'width="3" height="3" fill="{PAPER}" style="animation-delay:-{i*.37:.2f}s"/>' for i in range(9))
     body = (
         panel(0, 0, 440, 52) + label(24, 34, "SHAHAB7E.NFO") + label(416, 34, "1 / 1", fill=GRAY, anchor="end")
         + panel(452, 0, 748, 52) + label(1176, 34, "// RAPID PROTOTYPER & PRODUCT DEVELOPER", anchor="end")
-        + panel(0, 62, 240, 240)
-        + f'<clipPath id="pc"><rect x="2" y="64" width="236" height="236" rx="11"/></clipPath>'
-        + f'<image href="{face}" x="2" y="64" width="236" height="236" clip-path="url(#pc)"/>'
-        + sweep + corners(0, 62, 240, 240, 10, 16)
-        + panel(252, 62, 948, 240) + title
-        + label(252 + (W - 252) / 2, 262, "I SEE IT. I BUILD IT. I SHIP IT.", fill=GRAY, anchor="middle")
+        + panel(0, 62, 360, 240)
+        + f'<image href="{galaxy()}" x="10" y="72" width="340" height="230" style="image-rendering:pixelated" preserveAspectRatio="xMidYMid slice"/>'
+        + stars + sweep + corners(0, 62, 360, 240)
+        + panel(372, 62, 828, 240) + title
+        + label(372 + (W - 372) / 2, 262, "I SEE IT. I BUILD IT. I SHIP IT.", fill=GRAY, anchor="middle")
         + panel(0, 314, 1100, 90) + wave(24, 330, 1052, 58)
         + panel(1112, 314, 88, 90)
         + '<g class="sp" style="transform-origin:1156px 359px">' + ''.join(
