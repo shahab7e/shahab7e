@@ -167,13 +167,13 @@ def hero():
     stars = "".join(f'<rect class="tw" x="{random.Random(i).uniform(20, 340):.0f}" y="{random.Random(i+50).uniform(78, 290):.0f}" '
                     f'width="3" height="3" fill="{PAPER}" style="animation-delay:-{i*.37:.2f}s"/>' for i in range(9))
     body = (
-        panel(0, 0, 760, 52) + label(24, 34, "SHAHAB7E.NFO") + label(736, 34, "1 / 1", fill=GRAY, anchor="end")
-        + panel(772, 0, 428, 52) + label(1176, 34, "// VIBE CODER", anchor="end")
+        panel(0, 0, 440, 52) + label(24, 34, "SHAHAB7E.NFO") + label(416, 34, "1 / 1", fill=GRAY, anchor="end")
+        + panel(452, 0, 748, 52) + label(1176, 34, "// RAPID PROTOTYPER & PRODUCT DEVELOPER", anchor="end")
         + panel(0, 62, 360, 240)
         + f'<image href="{galaxy()}" x="10" y="72" width="340" height="230" style="image-rendering:pixelated" preserveAspectRatio="xMidYMid slice"/>'
         + stars + sweep + corners(0, 62, 360, 240)
         + panel(372, 62, 828, 240) + title
-        + label(372 + (W - 372) / 2, 262, "I DESCRIBE IT. AI BUILDS IT. I SHIP IT.", fill=GRAY, anchor="middle")
+        + label(372 + (W - 372) / 2, 262, "I SEE IT. I BUILD IT. I SHIP IT.", fill=GRAY, anchor="middle")
         + panel(0, 314, 1100, 90) + wave(24, 330, 1052, 58)
         + panel(1112, 314, 88, 90)
         + '<g class="sp" style="transform-origin:1156px 359px">' + ''.join(
@@ -183,7 +183,7 @@ def hero():
            ".tw{animation:tw 2.4s steps(2) infinite} @keyframes tw{50%{opacity:0}}"
            ".sc{animation:sc 5s linear infinite} @keyframes sc{from{transform:translateY(0)}to{transform:translateY(228px)}}"
            ".sp{animation:sp 14s linear infinite} @keyframes sp{to{transform:rotate(360deg)}}")
-    svg("hero.svg", H, body, css, "SHAHAB — vibe coder. I describe it, AI builds it, I ship it.")
+    svg("hero.svg", H, body, css, "SHAHAB — Rapid Prototyper & Product Developer. I see it, I build it, I ship it.")
 
 
 # ------------------------------------------------------------------ section header strip
@@ -277,13 +277,13 @@ def skill(repo, name, fa, desc, i):
 # ------------------------------------------------------------------ terminal (monochrome)
 LINES = [
     ("cmd", [("whoami", PAPER)]),
-    ("out", [("shahab", PAPER), (" — vibe coder. I describe it, AI builds it, I ship it.", GRAY)]),
+    ("out", [("shahab", PAPER), (" — rapid prototyper & product developer. I imagine it, then I build it.", GRAY)]),
     ("cmd", [("cat stack.txt", PAPER)]),
     ("out", [("TypeScript React Next.js Vite │ Django DRF Python PHP │ Claude Code", GRAY)]),
     ("cmd", [("ls ~/public", PAPER)]),
     ("out", [("gommage/  jam-jahan-nama/  asmari-care-map/  academia-platform/", PAPER)]),
-    ("cmd", [('claude "make it monochrome"', PAPER)]),
-    ("out", [("✔ done. shipped to main.", PAPER), ("  (vibes: immaculate)", GRAY)]),
+    ("cmd", [('./build --next "something cool"', PAPER)]),
+    ("out", [("✔ shipped.", PAPER), ("  next idea loading…", GRAY)]),
     ("cmd", []),
 ]
 
@@ -331,7 +331,7 @@ def terminal():
            + panel(0, 0, W, H) + f'<defs>{"".join(clips)}</defs>' + "".join(body)
            + f'<rect class="cur" x="{cur[0][1]:.1f}" y="{cur[0][2]-20}" width="{CW:.1f}" height="26" fill="{PAPER}">{cx}{cy}</rect>')
     svg("terminal.svg", H, out, f"text{{font:{FS}px {MONO}}} .cur{{animation:b 1s steps(1) infinite}} @keyframes b{{50%{{opacity:0}}}}",
-        "Terminal: whoami — shahab, vibe coder")
+        "Terminal: whoami — shahab, rapid prototyper & product developer")
 
 
 if __name__ == "__main__":

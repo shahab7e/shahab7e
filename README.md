@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/hero.svg" width="100%" alt="SHAHAB — vibe coder. I describe it, AI builds it, I ship it." /></p>
+<p align="center"><img src="assets/hero.svg" width="100%" alt="SHAHAB — Rapid Prototyper &amp; Product Developer. I see it, I build it, I ship it." /></p>
 
 <p align="center"><img src="assets/h-featured.svg" width="100%" alt="Featured" /></p>
 
@@ -33,7 +33,7 @@
 
 <p align="center"><img src="assets/h-about.svg" width="100%" alt="About" /></p>
 
-<p align="center"><img src="assets/terminal.svg" width="100%" alt="$ whoami — shahab, vibe coder. Stack: TypeScript, React, Next.js, Vite, Django, DRF, Python, PHP, Claude Code." /></p>
+<p align="center"><img src="assets/terminal.svg" width="100%" alt="$ whoami — shahab, rapid prototyper &amp; product developer. Stack: TypeScript, React, Next.js, Vite, Django, DRF, Python, PHP, Claude Code." /></p>
 
 <p align="center"><img src="assets/h-activity.svg" width="100%" alt="Activity" /></p>
 
