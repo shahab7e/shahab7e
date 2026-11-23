@@ -20,23 +20,31 @@ def cells(src, size):
     small = img.resize((cols, rows), Image.LANCZOS)
     lum = ImageOps.autocontrast(small.convert("L"), cutoff=1).load()
     rgb = small.load()
+    # background = bluish cells flood-filled from the top and side edges (not the bottom,
+    # so the jacket and shirt that touch the bottom edge stay part of the figure)
+    blue = lambda x, y: rgb[x, y][2] > rgb[x, y][0] + 8 and max(rgb[x, y]) - min(rgb[x, y]) > 18
+    bg, stack = set(), [(x, 0) for x in range(cols)] + [(0, y) for y in range(rows)] + [(cols - 1, y) for y in range(rows)]
+    while stack:
+        x, y = stack.pop()
+        if (x, y) in bg or not (0 <= x < cols and 0 <= y < rows) or not blue(x, y):
+            continue
+        bg.add((x, y))
+        stack += [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]
     out, k = [], 0
     for y in range(rows):
         for x in range(cols):
             ch = PHRASE[k % len(PHRASE)]
             k += 1
-            r, g, b = rgb[x, y]
-            if ch == " " or b > r + 8:          # spaces and the teal/navy background stay black
+            if ch == " " or (x, y) in bg:
                 continue
             v = min(1., max(0., (lum[x, y] / 255 - .2) / .5)) ** .9   # hard S-curve: crush darks, push skin to white
-            if v < .06:
-                continue
+            v = max(v, 0.)                     # dark parts of the figure (beard, shirt) stay as dim letters
             out.append((x * CW, y * CH, ch, min(LEVELS - 1, int(v * LEVELS))))
     return out
 
 
 def tone(level):
-    t = .22 + .78 * level / (LEVELS - 1)
+    t = .16 + .84 * level / (LEVELS - 1)
     return tuple(round(INK[i] + (PAPER[i] - INK[i]) * t) for i in range(3))
 
 
