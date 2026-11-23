@@ -339,7 +339,7 @@ def terminal():
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     for f in os.listdir(OUT):
-        if f.endswith(".svg"):  # portrait.png is an input, keep it
+        if f.endswith(".svg") and not f.startswith("portrait"):  # portrait.* comes from portrait.py
             os.remove(os.path.join(OUT, f))
     hero(); gommage(); terminal()
     for i, (n, num) in enumerate([("FEATURED", 1), ("INDEX", 2), ("SKILLS", 3), ("ABOUT", 4), ("ACTIVITY", 5)]):
