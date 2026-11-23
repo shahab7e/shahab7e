@@ -14,9 +14,14 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: ${{ github.repository_owner }}
+
+      - name: Recolour to monochrome
+        run: python3 scripts/mono_pacman.py dist/*.svg
 
       - uses: crazy-max/ghaction-github-pages@v3
         with:
