@@ -17,7 +17,7 @@
 <p align="center"><img src="assets/h-index.svg" width="100%" alt="Index" /></p>
 
 <p align="center">
-  <a href="https://shahab7e.github.io/jam-jahan-nama/"><img src="assets/p-jam-jahan-nama.svg" width="49%" alt="Jam-Jahan-Nama — Iran-centred world history timeline" /></a>
+  <a href="https://shahab7e.github.io/giti-nama/"><img src="assets/p-giti-nama.svg" width="49%" alt="Giti-Nama — Iran-centred world history timeline" /></a>
   <a href="https://shahab7e.github.io/asmari-care-map/"><img src="assets/p-asmari-care-map.svg" width="49%" alt="Asmari Care Map — contracted medical centres in Tehran" /></a>
   <a href="https://github.com/shahab7e/academia-platform"><img src="assets/p-academia-platform.svg" width="49%" alt="Academia — Persian-first learning platform" /></a>
   <a href="https://github.com/shahab7e/ariverse-timeline"><img src="assets/p-ariverse-timeline.svg" width="49%" alt="ARiVerse — interactive timeline presentation" /></a>

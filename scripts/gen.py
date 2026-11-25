@@ -237,7 +237,7 @@ def gommage():
 
 # ------------------------------------------------------------------ project cards (2 per row, shown at 49%)
 PROJECTS = [
-    ("jam-jahan-nama", "01 / LIVE", "JAM-JAHAN-NAMA", "جام جهان‌نما", ["Iran-centred world history", "timeline: who ruled where, when."], "shahab7e.github.io/jam-jahan-nama"),
+    ("giti-nama", "01 / LIVE", "GITI-NAMA", "گیتی‌نما", ["Iran-centred world history", "timeline: who ruled where, when."], "shahab7e.github.io/giti-nama"),
     ("asmari-care-map", "02 / LIVE", "ASMARI-CARE-MAP", "", ["Map + search of contracted", "medical centres in Tehran."], "shahab7e.github.io/asmari-care-map"),
     ("academia-platform", "03 / REPO", "ACADEMIA", "", ["Persian-first learning platform:", "courses, exams, VOD, shop."], "django · react 19"),
     ("ariverse-timeline", "04 / REPO", "ARIVERSE", "", ["Interactive timeline", "presentation."], "html · js"),
@@ -281,7 +281,7 @@ LINES = [
     ("cmd", [("cat stack.txt", PAPER)]),
     ("out", [("TypeScript React Next.js Vite │ Django DRF Python PHP │ Claude Code", GRAY)]),
     ("cmd", [("ls ~/public", PAPER)]),
-    ("out", [("gommage/  jam-jahan-nama/  asmari-care-map/  academia-platform/", PAPER)]),
+    ("out", [("gommage/  giti-nama/  asmari-care-map/  academia-platform/", PAPER)]),
     ("cmd", [('./build --next "something cool"', PAPER)]),
     ("out", [("✔ shipped.", PAPER), ("  next idea loading…", GRAY)]),
     ("cmd", []),
